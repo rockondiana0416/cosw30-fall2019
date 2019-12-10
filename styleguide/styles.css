@@ -521,8 +521,6 @@ th {
   font-family: "CarlitoRegular";
   font-weight: bold;
   font-size: 1.25em;
-  margin-left: 1%;
-  width: 95%;
 }
 .btn--green {
   background-color: #2E9347;
@@ -604,7 +602,7 @@ th {
 }
 .btn--block {
   display: block;
-  width: 95%;
+  width: 98%;
   text-align: center;
 }
 
@@ -620,11 +618,7 @@ th {
   padding: 10px 15.4375px;
 }
 
-<<<<<<< HEAD
 /* main color for breadcrumb*/
-=======
-/* main outline */
->>>>>>> 592aace36bd65cb5feee692df2c19bdbcfc1d4fd
 ul.breadcrumb {
   padding: 10px 10px;
   list-style: none;
@@ -1248,51 +1242,140 @@ hr {
   clear: both;
 }
 
-.category_section {
-  display: flex;
-  justify-content: center;
-  align-content: flex-end;
-  margin-bottom: 5%;
+/* STICKY LEFT SIDEBAR NAVIGATION*/
+.customer-service__main {
+  margin-left: 10em;
+  /*AT LEAST SAME WIDTH AS SIDE NAVBAR*/
+  padding-left: 35px;
+  padding-bottom: 35px;
 }
-
-.category_image {
+.customer-service__sidebar {
+  height: 100%;
+  width: 10em;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #2E9347;
+  overflow-x: hidden;
+  padding-top: 3em;
+}
+.customer-service__sidebar ul {
+  list-style: none;
+}
+.customer-service__sidebar a {
+  padding: 1em;
+  text-decoration: none;
+  font-size: 1.3em;
+  color: #FFF;
   display: block;
-  max-width: 200px;
-  height: 200px;
-  overflow: hidden;
-  margin-left: auto;
-  margin-right: auto;
+}
+.customer-service__sidebar a:hover {
+  color: #000;
 }
 
+.welcome {
+  position: relative;
+}
+.welcome img {
+  width: 100%;
+}
+.welcome h1 {
+  position: absolute;
+  top: 12%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.category_item {
+  margin-bottom: 10%;
+}
+.category_item_img {
+  height: 250px;
+  width: 250px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.category_item_img img {
+  display: block;
+  height: 100%;
+  margin: 0 auto;
+}
 .category_item h3 {
   text-align: center;
   margin-top: 15px;
 }
-
 .category_item a {
   display: block;
-  width: 25%;
+  width: 40%;
   margin-left: auto;
   margin-right: auto;
 }
 
-h2 {
+.banner {
+  position: relative;
+}
+.banner img {
+  width: 100%;
+}
+.banner p {
+  position: absolute;
+  font-weight: bold;
+  color: white;
+}
+.banner .textLeft {
+  top: 15%;
+  left: 15px;
+  font-size: 3em;
+  font-weight: bold;
+  width: 70%;
+}
+.banner .textRight {
+  top: 30%;
+  right: 15px;
+  font-size: 3em;
+}
+
+.index_h2 {
   text-align: center;
   margin-bottom: 3%;
   margin-top: 3%;
 }
 
-.hero_image {
-  display: block;
-  max-width: 100%;
-}
-
-.main_blurb {
+.index_blurb {
   margin-bottom: 3%;
 }
 
+@media (min-width: 750px) {
+  .category {
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+  }
+  .category_item {
+    margin: 0 1% 10%;
+  }
+
+  .banner .textLeft {
+    top: 20%;
+    font-size: 4.5em;
+  }
+  .banner .textRight {
+    top: 35%;
+    font-size: 4em;
+  }
+}
 .product-list__img {
   overflow: hidden;
+  width: 350px;
+  height: 350px;
+}
+.product-list__img img {
+  width: 100%;
 }
 
 h4 {
@@ -1322,23 +1405,68 @@ h4 {
   text-align: center;
 }
 
+.form__hide {
+  display: none;
+}
+
+.btn--post {
+  width: 100%;
+  margin-top: 1em;
+  line-height: 1em;
+}
+
 .site-footer {
-  background-image: url("/img/tile_black_asphault.jpg");
+  color: #000;
+  text-align: center;
+}
+.site-footer__list {
+  list-style: none;
+  margin: 0 auto;
+}
+.site-footer__list-item {
+  display: inline-block;
+  padding: 40px;
+  font-size: 20px;
+}
+.site-footer__list-item a {
+  color: #000;
+  text-decoration: none;
 }
 
 /*
 *   Contains styles related to the header
 */
+.site-header__logo {
+  max-width: 75%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.site-header__main-logo {
+  margin: 0px auto;
+  width: 100%;
+  clear: right;
+}
 .site-header__nav {
   list-style-type: none;
   margin: 10px;
   padding: 3%;
-  overflow: hidden;
-  width: 100%;
+  text-align: center;
 }
 .site-header__nav-item {
-  float: left;
+  display: inline-block;
   margin-left: 2.75%;
+}
+.site-header__top-btn {
+  display: block;
+  background-color: white;
+  padding: 10px;
+  border: 5px ridge #2E9347;
+  float: right;
+  margin: 1%;
+}
+.site-header__top-btn i {
+  color: #000;
 }
 
 /*
